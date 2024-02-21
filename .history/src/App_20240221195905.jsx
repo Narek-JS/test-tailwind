@@ -1,0 +1,28 @@
+import { useEffect, useState } from "react"
+
+const styles = {
+  bigSize: 66,
+  smallSize: 16
+};
+
+function App() {
+  const [size, setSize] = useState("000");
+    
+  console.log('size --> ', size);
+
+  return (
+    <>
+      <h1 className={`bg-[#000]`}>
+        Hello world!
+        <input
+          // type="number"
+          onChange={e =>{
+            setSize(e.target.value)
+          }}
+        />
+      </h1>
+    </>
+  )
+}
+
+export default App
